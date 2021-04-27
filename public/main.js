@@ -1,12 +1,18 @@
-"use strict";
+import { Invoice } from "./classes/Invoice.js";
+const invOne = new Invoice("ola", "web development", 400);
+const invTwo = new Invoice("ayo", "web design", 300);
+let invoices = [];
+invoices.push(invOne);
+invoices.push(invTwo);
+console.log(invoices);
 // Form
-var form = document.querySelector(".new-item-form");
+const form = document.querySelector(".new-item-form");
 // Inputs
-var type = document.querySelector("#type");
-var toFrom = document.querySelector("#toFrom");
-var details = document.querySelector("#details");
-var amount = document.querySelector("#amount");
-form.addEventListener("submit", function (e) {
+const type = document.querySelector("#type");
+const toFrom = document.querySelector("#toFrom");
+const details = document.querySelector("#details");
+const amount = document.querySelector("#amount");
+form.addEventListener("submit", (e) => {
     e.preventDefault();
     console.log(type.value, toFrom.value, details.value, amount.value);
 });
